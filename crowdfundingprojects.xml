@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.6" type="plugin" group="community" method="upgrade">
+    <name>PLG_COMMUNITY_CROWDFUNDINGPROJECTS</name>
+    <author>Todor Iliev</author>
+    <copyright>Copyright (C) 2017 ITPrism.com. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.en.html GNU/GPLv3</license>
+    <authorEmail>todor@itprism.com</authorEmail>
+    <authorUrl>http://itprism.com</authorUrl>
+    <version>1.1</version>
+    <creationDate>18 September, 2016</creationDate>
+    <isapplication>true</isapplication>
+    <description><![CDATA[
+    <p>This plug-in displays user campaigns on his JomSocial profile.</p>
+    <p><a href="http://itprism.com/" target="_blank">Subscribe for the newsletter</a> to receive information about updates and new ITPrism extensions.</p>
+    <p>Please, <a href="http://extensions.joomla.org/extensions/extension/e-commerce/donations/crowdfunding" target="_blank">vote for the extension</a> on Joomla! Extensions Directory</p>
+    ]]></description>
+    
+    <files>
+        <filename plugin="crowdfundingprojects">crowdfundingprojects.php</filename>
+        <folder>crowdfundingprojects</folder>
+        <folder>language</folder>
+    </files>
+    
+    <help url="PLG_COMMUNITY_CROWDFUNDINGPROJECTS_HELP_URL"/>
+    
+    <config>
+		<fields name="params">
+			<fieldset name="basic">
+                <field name="coreapp" type="radio" default="0" label="PLG_COMMUNITY_CROWDFUNDINGPROJECTS_COREAPP" description="PLG_COMMUNITY_CROWDFUNDINGPROJECTS_COREAPP_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="image_size" type="list" default="square" label="PLG_COMMUNITY_CROWDFUNDINGPROJECTS_IMAGE_SIZE" description="PLG_COMMUNITY_CROWDFUNDINGPROJECTS_IMAGE_SIZE_DESC" class="btn-group">
+                    <option value="small">PLG_COMMUNITY_CROWDFUNDINGPROJECTS_SMALL</option>
+                    <option value="square">PLG_COMMUNITY_CROWDFUNDINGPROJECTS_SQUARE</option>
+                </field>
+
+                <field name="position" type="list" default="content" label="PLG_COMMUNITY_CROWDFUNDINGPROJECTS_POSITION" description="PLG_COMMUNITY_CROWDFUNDINGPROJECTS_POSITION_DESC">
+                    <option value="content">PLG_COMMUNITY_CROWDFUNDINGPROJECTS_CONTENT</option>
+                    <option value="sidebar-top">PLG_COMMUNITY_CROWDFUNDINGPROJECTS_SIDEBAR_TOP</option>
+                    <option value="sidebar-bottom">PLG_COMMUNITY_CROWDFUNDINGPROJECTS_SIDEBAR_BOTTOM</option>
+                </field>
+		  </fieldset>
+	   </fields>
+	</config>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Community - Crowdfunding Projects ( from CDN )">http://cdn.itprism.com/updates/crowdfunding/plugins/plg_community_crowdfundingprojects.xml</server>
+    </updateservers>
+</extension>
